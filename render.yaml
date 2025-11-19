@@ -1,9 +1,6 @@
 services:
   - type: web
     name: cheating-detection-app
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run streamlit_app.py --server.port $PORT
-    repo: https://github.com/YashiGarg016/cheating-detection
-    branch: main
+    env: docker
+    dockerfilePath: Dockerfile
     plan: free
